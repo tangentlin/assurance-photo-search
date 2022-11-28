@@ -11,7 +11,7 @@ function getGridColumnTemplate(mode: ListMode, itemPerRow: number, total: number
   if (mode === ListMode.Grid) {
     return `repeat(${itemPerRow}, 1fr)`;
   } else {
-    return `repeat(${total}, 120px)`;
+    return `repeat(${total}, 10vh)`;
   }
 }
 
@@ -27,7 +27,7 @@ export const Grid = styled.div<IGridLayout>`
   }
 
   @media only screen and ${ResponseSizes.tablet} {
-    grid-template-columns: ${props => getGridColumnTemplate(props.mode, 9, props.total)};
+    grid-template-columns: ${props => getGridColumnTemplate(props.mode, 8, props.total)};
   }
 
   @media only screen and ${ResponseSizes.laptop} {

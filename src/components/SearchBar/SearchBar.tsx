@@ -12,13 +12,13 @@ const SearchInput = styled.input`
   
   background-image: url(${searchIcon});
   background-repeat: no-repeat;
-  background-position-x: 1rem;
+  background-position-x: 0.5rem;
   background-position-y: center;
   background-size: 1.5rem;
-  background-color: ${Grey['300']};
+  background-color: ${Grey['100']};
 
   box-sizing: border-box;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
   
   border: 2px transparent solid;
   

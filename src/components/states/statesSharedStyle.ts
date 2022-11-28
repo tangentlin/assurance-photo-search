@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Grey} from "../../styles/Colors";
 
 export const PureInformation = styled.div`
   width: 100%;
@@ -8,4 +9,5 @@ export const PureInformation = styled.div`
   padding: 5rem;
   box-sizing: border-box;
   text-align: center;
+  color: ${Grey['700']}
 `;
