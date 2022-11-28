@@ -67,7 +67,6 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
-    "@types/react-virtualized-auto-sizer": "^1.0.1",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-named-exports-order": "^0.0.2",
     "enhanced-resolve": "^5.10.0",

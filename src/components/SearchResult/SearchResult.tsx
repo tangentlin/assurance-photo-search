@@ -8,12 +8,13 @@ import {ZeroState} from "../states/ZeroState/ZeroState";
 import {ErrorState} from "../states/ErrorState/ErrorState";
 import {Gallery} from "../Gallery/Gallery";
 import {EmptyState} from "../states/EmptyState/EmptyState";
+import {MaxSearchResult} from "../../utils/Constants";
 
 export const SearchResult: FunctionComponent<SearchResultProps> = (props) => {
   const phase = guessSearchPhase(props.data, Boolean(props.isLoading), Boolean(props.hasError));
 
   if (phase === SearchPhase.Loading) {
-    return <LoadingState className={props.className} />
+    return <LoadingState className={props.className} total={MaxSearchResult} />
   }
 
   if (phase === SearchPhase.Error) {

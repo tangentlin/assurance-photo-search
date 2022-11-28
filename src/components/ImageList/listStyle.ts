@@ -8,8 +8,11 @@ interface IGridLayout {
 }
 
 function getGridColumnTemplate(mode: ListMode, itemPerRow: number, total: number): string {
-  const perRow = (mode === ListMode.Grid) ? itemPerRow : total;
-  return `repeat(${perRow}, 1fr)`;
+  if (mode === ListMode.Grid) {
+    return `repeat(${itemPerRow}, 1fr)`;
+  } else {
+    return `repeat(${total}, 120px)`;
+  }
 }
 
 export const Grid = styled.div<IGridLayout>`
@@ -17,6 +20,7 @@ export const Grid = styled.div<IGridLayout>`
   grid-gap: 5px;
   transition: all ease-in-out 0.5s;
   grid-template-columns: ${props => getGridColumnTemplate(props.mode, 5, props.total)};
+  overflow: auto;
   
   @media only screen and ${ResponseSizes.phone} {
     grid-template-columns: ${props => getGridColumnTemplate(props.mode, 5, props.total)};

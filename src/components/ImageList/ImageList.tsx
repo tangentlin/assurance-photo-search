@@ -24,7 +24,7 @@ export const ImageList: FunctionComponent<ImageListProps> = (props) => {
   return (
     <Grid className={props.className} mode={mode} total={images.length}>
       {
-        images.map((img) => <Item style={{aspectRatio: 1}} key={img.id}>
+        images.map((img) => <Item key={img.id}>
           <SelectableImage
             image={img}
             selected={img.id === selected?.id}

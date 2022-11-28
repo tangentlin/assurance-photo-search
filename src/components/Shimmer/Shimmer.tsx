@@ -24,7 +24,7 @@ const AnimatedColor = styled.div`
   
   background-color: ${baseColor};
   background-image: linear-gradient(to right, ${baseColor} 0%, ${glossColor} 20%, ${baseColor} 40%, ${baseColor} 100%);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 1200px 360px;
   display: block;
   position: relative;
